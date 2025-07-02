@@ -18,9 +18,9 @@ use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class FilterableStatsOverviewWidgetServiceProvider extends PackageServiceProvider
 {
-    public static string $name = 'filterablestatsoverviewwidget';
+    public static string $name = 'filterableStatsOverviewWidget';
 
-    public static string $viewNamespace = 'filterablestatsoverviewwidget';
+    public static string $viewNamespace = 'filterableStatsOverviewWidget';
 
     public function configurePackage(Package $package): void
     {
@@ -36,7 +36,7 @@ class FilterableStatsOverviewWidgetServiceProvider extends PackageServiceProvide
                     ->publishConfigFile()
                     ->publishMigrations()
                     ->askToRunMigrations()
-                    ->askToStarRepoOnGitHub('hans-thomas/filterablestatsoverviewwidget');
+                    ->askToStarRepoOnGitHub('hans-thomas/filterableStatsOverviewWidget');
             });
 
         $configFileName = $package->shortName();
@@ -80,8 +80,8 @@ class FilterableStatsOverviewWidgetServiceProvider extends PackageServiceProvide
         if (app()->runningInConsole()) {
             foreach (app(Filesystem::class)->files(__DIR__ . '/../stubs/') as $file) {
                 $this->publishes([
-                    $file->getRealPath() => base_path("stubs/filterablestatsoverviewwidget/{$file->getFilename()}"),
-                ], 'filterablestatsoverviewwidget-stubs');
+                    $file->getRealPath() => base_path("stubs/filterableStatsOverviewWidget/{$file->getFilename()}"),
+                ], 'filterableStatsOverviewWidget-stubs');
             }
         }
 
@@ -91,7 +91,7 @@ class FilterableStatsOverviewWidgetServiceProvider extends PackageServiceProvide
 
     protected function getAssetPackageName(): ?string
     {
-        return 'hans-thomas/filterablestatsoverviewwidget';
+        return 'hans-thomas/filterableStatsOverviewWidget';
     }
 
     /**
@@ -100,9 +100,9 @@ class FilterableStatsOverviewWidgetServiceProvider extends PackageServiceProvide
     protected function getAssets(): array
     {
         return [
-            // AlpineComponent::make('filterablestatsoverviewwidget', __DIR__ . '/../resources/dist/components/filterablestatsoverviewwidget.js'),
-            Css::make('filterablestatsoverviewwidget-styles', __DIR__ . '/../resources/dist/filterablestatsoverviewwidget.css'),
-            Js::make('filterablestatsoverviewwidget-scripts', __DIR__ . '/../resources/dist/filterablestatsoverviewwidget.js'),
+            // AlpineComponent::make('filterableStatsOverviewWidget', __DIR__ . '/../resources/dist/components/filterableStatsOverviewWidget.js'),
+            Css::make('filterableStatsOverviewWidget-styles', __DIR__ . '/../resources/dist/filterableStatsOverviewWidget.css'),
+            Js::make('filterableStatsOverviewWidget-scripts', __DIR__ . '/../resources/dist/filterableStatsOverviewWidget.js'),
         ];
     }
 
@@ -146,7 +146,7 @@ class FilterableStatsOverviewWidgetServiceProvider extends PackageServiceProvide
     protected function getMigrations(): array
     {
         return [
-            'create_filterablestatsoverviewwidget_table',
+            'create_filterableStatsOverviewWidget_table',
         ];
     }
 }
