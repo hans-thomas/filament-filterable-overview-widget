@@ -2,11 +2,6 @@
 
 namespace Hans\FilterableStatsOverviewWidget;
 
-use Filament\Support\Assets\Asset;
-use Filament\Support\Assets\Css;
-use Filament\Support\Assets\Js;
-use Filament\Support\Facades\FilamentAsset;
-use Filament\Support\Facades\FilamentIcon;
 use Hans\FilterableStatsOverviewWidget\Commands\FilterableStatsOverviewWidgetCommand;
 use Illuminate\Filesystem\Filesystem;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
@@ -33,20 +28,6 @@ class FilterableStatsOverviewWidgetServiceProvider extends PackageServiceProvide
                     ->askToStarRepoOnGitHub('hans-thomas/filterableStatsOverviewWidget');
             });
 
-        $configFileName = $package->shortName();
-
-        if (file_exists($package->basePath("/../config/{$configFileName}.php"))) {
-            $package->hasConfigFile();
-        }
-
-        if (file_exists($package->basePath('/../database/migrations'))) {
-            $package->hasMigrations($this->getMigrations());
-        }
-
-        if (file_exists($package->basePath('/../resources/lang'))) {
-            $package->hasTranslations();
-        }
-
         if (file_exists($package->basePath('/../resources/views'))) {
             $package->hasViews(static::$viewNamespace);
         }
@@ -56,20 +37,6 @@ class FilterableStatsOverviewWidgetServiceProvider extends PackageServiceProvide
 
     public function packageBooted(): void
     {
-        // Asset Registration
-        FilamentAsset::register(
-            $this->getAssets(),
-            $this->getAssetPackageName()
-        );
-
-        FilamentAsset::registerScriptData(
-            $this->getScriptData(),
-            $this->getAssetPackageName()
-        );
-
-        // Icon Registration
-        FilamentIcon::register($this->getIcons());
-
         // Handle Stubs
         if (app()->runningInConsole()) {
             foreach (app(Filesystem::class)->files(__DIR__ . '/../stubs/') as $file) {
@@ -86,58 +53,12 @@ class FilterableStatsOverviewWidgetServiceProvider extends PackageServiceProvide
     }
 
     /**
-     * @return array<Asset>
-     */
-    protected function getAssets(): array
-    {
-        return [
-            // AlpineComponent::make('filterableStatsOverviewWidget', __DIR__ . '/../resources/dist/components/filterableStatsOverviewWidget.js'),
-            Css::make('filterableStatsOverviewWidget-styles', __DIR__ . '/../resources/dist/filterableStatsOverviewWidget.css'),
-            Js::make('filterableStatsOverviewWidget-scripts', __DIR__ . '/../resources/dist/filterableStatsOverviewWidget.js'),
-        ];
-    }
-
-    /**
      * @return array<class-string>
      */
     protected function getCommands(): array
     {
         return [
             FilterableStatsOverviewWidgetCommand::class,
-        ];
-    }
-
-    /**
-     * @return array<string>
-     */
-    protected function getIcons(): array
-    {
-        return [];
-    }
-
-    /**
-     * @return array<string>
-     */
-    protected function getRoutes(): array
-    {
-        return [];
-    }
-
-    /**
-     * @return array<string, mixed>
-     */
-    protected function getScriptData(): array
-    {
-        return [];
-    }
-
-    /**
-     * @return array<string>
-     */
-    protected function getMigrations(): array
-    {
-        return [
-            'create_filterableStatsOverviewWidget_table',
         ];
     }
 }
