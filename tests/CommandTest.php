@@ -54,7 +54,7 @@ namespace App\Filament\Widgets;
 use Closure;
 use FilterableStatsWithFormOverview\FilterableStatsOverviewWidget\FilterableStatsOverviewWidget as BaseWidget;
 
-class FilterableStatsOverviewWidget extends BaseWidget
+class MyFilterableStatsOverviewWidget extends BaseWidget
 {
     protected function getSearchResultsUsing(): Closure
     {

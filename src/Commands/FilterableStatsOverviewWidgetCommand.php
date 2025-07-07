@@ -27,17 +27,18 @@ class FilterableStatsOverviewWidgetCommand extends Command
             $path = app_path("Filament/{$panel}/Widgets");
             $namespace = 'App\\Filament\\' . ucfirst($panel) . '\\Widgets';
         }
-        $path .= '/' . ucfirst($name);
+        $path .= '/' . ucfirst($name) . '.php';
 
         $filesystem = app(Filesystem::class);
 
         $stub = $filesystem->get(__DIR__ . '/../../stubs/FilterableStatsOverviewWidget.stub');
         $stub = str_replace('{{NAMESPACE}}', $namespace, $stub);
+        $stub = str_replace('{{NAME}}', ucfirst($name), $stub);
 
         $filesystem->ensureDirectoryExists(
             pathinfo($path, PATHINFO_DIRNAME),
         );
-        $filesystem->put("$path.php", $stub);
+        $filesystem->put($path, $stub);
 
         return self::SUCCESS;
     }

@@ -5,7 +5,7 @@ namespace {{NAMESPACE}};
 use Closure;
 use FilterableStatsWithFormOverview\FilterableStatsOverviewWidget\FilterableStatsOverviewWidget as BaseWidget;
 
-class FilterableStatsOverviewWidget extends BaseWidget
+class {{NAME}} extends BaseWidget
 {
     protected function getSearchResultsUsing(): Closure
     {
