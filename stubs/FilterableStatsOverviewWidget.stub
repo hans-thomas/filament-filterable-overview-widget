@@ -3,7 +3,7 @@
 namespace {{NAMESPACE}};
 
 use Closure;
-use FilterableStatsWithFormOverview\FilterableStatsOverviewWidget\FilterableStatsOverviewWidget as BaseWidget;
+use Hans\FilterableStatsOverviewWidget\FilterableStatsOverviewWidget as BaseWidget;
 
 class {{NAME}} extends BaseWidget
 {
