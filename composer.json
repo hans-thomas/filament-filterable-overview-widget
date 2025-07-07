@@ -1,16 +1,18 @@
 {
     "name": "hans-thomas/filterablestatsoverviewwidget",
-    "description": "The filterableStatsOverviewWidget package lets you to filter your stats data.",
+    "description": "The FilterableStatsOverviewWidget package lets you to filter your stats data.",
     "keywords": [
         "hans-thomas",
         "laravel",
         "filament",
-        "filterablestatsoverviewwidget"
+        "filament-plugin",
+        "filament-widget",
+        "filterable stats overview widget"
     ],
-    "homepage": "https://github.com/hans-thomas/filterablestatsoverviewwidget",
+    "homepage": "https://github.com/hans-thomas/FilterableStatsOverviewWidget",
     "support": {
-        "issues": "https://github.com/hans-thomas/filterablestatsoverviewwidget/issues",
-        "source": "https://github.com/hans-thomas/filterablestatsoverviewwidget"
+        "issues": "https://github.com/hans-thomas/FilterableStatsOverviewWidget/issues",
+        "source": "https://github.com/hans-thomas/FilterableStatsOverviewWidget"
     },
     "license": "MIT",
     "authors": [
@@ -39,13 +41,13 @@
     },
     "autoload": {
         "psr-4": {
-            "FilterableStatsWithFormOverview\\FilterableStatsOverviewWidget\\": "src/",
-            "FilterableStatsWithFormOverview\\FilterableStatsOverviewWidget\\Database\\Factories\\": "database/factories/"
+            "Hans\\FilterableStatsOverviewWidget\\": "src/",
+            "Hans\\FilterableStatsOverviewWidget\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "FilterableStatsWithFormOverview\\FilterableStatsOverviewWidget\\Tests\\": "tests/"
+            "Hans\\FilterableStatsOverviewWidget\\Tests\\": "tests/"
         }
     },
     "scripts": {
