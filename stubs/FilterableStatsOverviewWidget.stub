@@ -1,0 +1,23 @@
+<?php
+
+namespace {{NAMESPACE}};
+
+use Closure;
+use FilterableStatsWithFormOverview\FilterableStatsOverviewWidget\FilterableStatsOverviewWidget as BaseWidget;
+
+class FilterableStatsOverviewWidget extends BaseWidget
+{
+    protected function getSearchResultsUsing(): Closure
+    {
+        return function (string $search): array {
+            return;
+        };
+    }
+
+    protected function getOptionLabelUsing(): Closure
+    {
+        return function (string $value): string {
+            return;
+        };
+    }
+}

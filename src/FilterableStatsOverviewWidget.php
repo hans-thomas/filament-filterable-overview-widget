@@ -2,6 +2,7 @@
 
 namespace FilterableStatsWithFormOverview\FilterableStatsOverviewWidget;
 
+use Closure;
 use Filament\Actions\Concerns\InteractsWithActions;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Concerns\InteractsWithForms;
@@ -22,8 +23,6 @@ abstract class FilterableStatsOverviewWidget extends BaseWidget implements HasFo
     protected static string $view = 'filterableStatsOverviewWidget::filterable-overview';
 
     protected static ?string $pollingInterval = null;
-
-    protected ?string $item_label = null;
 
     public ?int $item_id = null;
 
@@ -59,12 +58,12 @@ abstract class FilterableStatsOverviewWidget extends BaseWidget implements HasFo
         $this->cachedStats = null;
     }
 
-    abstract protected function getSearchResultsUsing(): callable;
+    abstract protected function getSearchResultsUsing(): Closure;
 
-    abstract protected function getOptionLabelUsing(): callable;
+    abstract protected function getOptionLabelUsing(): Closure;
 
     protected function getItemLabel(): ?string
     {
-        return $this->item_label;
+        return null;
     }
 }
