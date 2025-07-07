@@ -20,4 +20,9 @@ class {{NAME}} extends BaseWidget
             return;
         };
     }
+
+    protected function getStats(): array
+    {
+        return [];
+    }
 }

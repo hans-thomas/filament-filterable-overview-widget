@@ -69,6 +69,11 @@ class MyFilterableStatsOverviewWidget extends BaseWidget
             return;
         };
     }
+
+    protected function getStats(): array
+    {
+        return [];
+    }
 }
 
 STUB
