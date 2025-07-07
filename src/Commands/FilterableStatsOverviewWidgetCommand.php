@@ -31,7 +31,7 @@ class FilterableStatsOverviewWidgetCommand extends Command
 
         $filesystem = app(Filesystem::class);
 
-        $stub = $filesystem->get('stubs/FilterableStatsOverviewWidget.stub');
+        $stub = $filesystem->get(__DIR__ . '/../../stubs/FilterableStatsOverviewWidget.stub');
         $stub = str_replace('{{NAMESPACE}}', $namespace, $stub);
 
         $filesystem->ensureDirectoryExists(
