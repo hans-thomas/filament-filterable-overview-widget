@@ -64,6 +64,6 @@ abstract class FilterableStatsOverviewWidget extends BaseWidget implements HasFo
 
     protected function getItemLabel(): ?string
     {
-        return null;
+        return '';
     }
 }
