@@ -67,10 +67,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "FilterableStatsWithFormOverview\\FilterableStatsOverviewWidget\\FilterableStatsOverviewWidgetServiceProvider"
+                "Hans\\FilterableStatsOverviewWidget\\FilterableStatsOverviewWidgetServiceProvider"
             ],
             "aliases": {
-                "FilterableStatsOverviewWidget": "FilterableStatsWithFormOverview\\FilterableStatsOverviewWidget\\Facades\\FilterableStatsOverviewWidget"
+                "FilterableStatsOverviewWidget": "Hans\\FilterableStatsOverviewWidget\\Facades\\FilterableStatsOverviewWidget"
             }
         }
     },
