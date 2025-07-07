@@ -22,6 +22,15 @@ it(
 );
 
 it(
+    'Check make command output',
+    function () {
+        artisan('make:filament-filterable-overview-widget MyFilterableStatsOverviewWidget')
+            ->expectsOutput('Widget class created successfully.')
+            ->assertExitCode(0);
+    }
+);
+
+it(
     'Run make command with a panel specified',
     function () {
         $file = app_path('Filament/Writers/Widgets/MyFilterableStatsOverviewWidget.php');

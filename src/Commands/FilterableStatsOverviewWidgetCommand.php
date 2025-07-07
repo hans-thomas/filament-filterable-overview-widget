@@ -40,6 +40,8 @@ class FilterableStatsOverviewWidgetCommand extends Command
         );
         $filesystem->put($path, $stub);
 
+        $this->info('Widget class created successfully.');
+
         return self::SUCCESS;
     }
 }
