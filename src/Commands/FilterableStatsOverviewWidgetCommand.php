@@ -4,7 +4,6 @@ namespace Hans\FilterableStatsOverviewWidget\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
-use function Symfony\Component\String\s;
 
 class FilterableStatsOverviewWidgetCommand extends Command
 {
@@ -32,7 +31,7 @@ class FilterableStatsOverviewWidgetCommand extends Command
 
         $filesystem = app(Filesystem::class);
 
-        $stub = $filesystem->get(__DIR__.'/../../stubs/FilterableStatsOverviewWidget.stub');
+        $stub = $filesystem->get(__DIR__ . '/../../stubs/FilterableStatsOverviewWidget.stub');
         $stub = str_replace('{{NAMESPACE}}', $namespace, $stub);
 
         $filesystem->ensureDirectoryExists(
