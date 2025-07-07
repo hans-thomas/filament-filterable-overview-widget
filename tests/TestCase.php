@@ -1,6 +1,6 @@
 <?php
 
-namespace FilterableStatsWithFormOverview\FilterableStatsOverviewWidget\Tests;
+namespace Hans\FilterableStatsOverviewWidget\Tests;
 
 use BladeUI\Heroicons\BladeHeroiconsServiceProvider;
 use BladeUI\Icons\BladeIconsServiceProvider;
@@ -12,7 +12,7 @@ use Filament\Notifications\NotificationsServiceProvider;
 use Filament\Support\SupportServiceProvider;
 use Filament\Tables\TablesServiceProvider;
 use Filament\Widgets\WidgetsServiceProvider;
-use FilterableStatsWithFormOverview\FilterableStatsOverviewWidget\FilterableStatsOverviewWidgetServiceProvider;
+use Hans\FilterableStatsOverviewWidget\FilterableStatsOverviewWidgetServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
@@ -25,7 +25,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'FilterableStatsWithFormOverview\\FilterableStatsOverviewWidget\\Database\\Factories\\' . class_basename($modelName) . 'Factory'
+            fn (string $modelName) => 'Hans\\FilterableStatsOverviewWidget\\Database\\Factories\\' . class_basename($modelName) . 'Factory'
         );
     }
 
@@ -51,10 +51,5 @@ class TestCase extends Orchestra
     public function getEnvironmentSetUp($app)
     {
         config()->set('database.default', 'testing');
-
-        /*
-        $migration = include __DIR__.'/../database/migrations/create_filterablestatsoverviewwidget_table.php.stub';
-        $migration->up();
-        */
     }
 }

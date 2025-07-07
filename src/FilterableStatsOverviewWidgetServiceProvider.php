@@ -1,6 +1,6 @@
 <?php
 
-namespace FilterableStatsWithFormOverview\FilterableStatsOverviewWidget;
+namespace Hans\FilterableStatsOverviewWidget;
 
 use Filament\Support\Assets\AlpineComponent;
 use Filament\Support\Assets\Asset;
@@ -8,10 +8,8 @@ use Filament\Support\Assets\Css;
 use Filament\Support\Assets\Js;
 use Filament\Support\Facades\FilamentAsset;
 use Filament\Support\Facades\FilamentIcon;
-use FilterableStatsWithFormOverview\FilterableStatsOverviewWidget\Commands\FilterableStatsOverviewWidgetCommand;
-use FilterableStatsWithFormOverview\FilterableStatsOverviewWidget\Testing\TestsFilterableStatsOverviewWidget;
+use Hans\FilterableStatsOverviewWidget\Commands\FilterableStatsOverviewWidgetCommand;
 use Illuminate\Filesystem\Filesystem;
-use Livewire\Features\SupportTesting\Testable;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
@@ -33,9 +31,6 @@ class FilterableStatsOverviewWidgetServiceProvider extends PackageServiceProvide
             ->hasCommands($this->getCommands())
             ->hasInstallCommand(function (InstallCommand $command) {
                 $command
-                    ->publishConfigFile()
-                    ->publishMigrations()
-                    ->askToRunMigrations()
                     ->askToStarRepoOnGitHub('hans-thomas/filterableStatsOverviewWidget');
             });
 
@@ -84,9 +79,6 @@ class FilterableStatsOverviewWidgetServiceProvider extends PackageServiceProvide
                 ], 'filterableStatsOverviewWidget-stubs');
             }
         }
-
-        // Testing
-        Testable::mixin(new TestsFilterableStatsOverviewWidget);
     }
 
     protected function getAssetPackageName(): ?string

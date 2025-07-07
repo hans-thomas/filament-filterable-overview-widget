@@ -1,5 +1,5 @@
 <?php
 
-use FilterableStatsWithFormOverview\FilterableStatsOverviewWidget\Tests\TestCase;
+use Hans\FilterableStatsOverviewWidget\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);

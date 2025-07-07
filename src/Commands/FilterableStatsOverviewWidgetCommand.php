@@ -1,6 +1,6 @@
 <?php
 
-namespace FilterableStatsWithFormOverview\FilterableStatsOverviewWidget\Commands;
+namespace Hans\FilterableStatsOverviewWidget\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;

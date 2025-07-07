@@ -1,6 +1,6 @@
 <?php
 
-namespace FilterableStatsWithFormOverview\FilterableStatsOverviewWidget;
+namespace Hans\FilterableStatsOverviewWidget;
 
 use Closure;
 use Filament\Actions\Concerns\InteractsWithActions;
