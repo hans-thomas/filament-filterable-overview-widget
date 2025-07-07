@@ -56,6 +56,8 @@ use Hans\FilterableStatsOverviewWidget\FilterableStatsOverviewWidget as BaseWidg
 
 class MyFilterableStatsOverviewWidget extends BaseWidget
 {
+    protected static ?int $sort = -1;
+
     protected function getSearchResultsUsing(): Closure
     {
         return function (string $search): array {
