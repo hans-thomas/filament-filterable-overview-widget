@@ -1,11 +1,11 @@
 <?php
 
-namespace Hans\FilterableStatsOverviewWidget\Commands;
+namespace Hans\FilamentFilterableOverviewWidget\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
 
-class FilterableStatsOverviewWidgetCommand extends Command
+class FilamentFilterableOverviewWidgetCommand extends Command
 {
     public $signature = '
     make:filament-filterable-overview-widget

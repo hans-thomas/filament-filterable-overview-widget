@@ -1,5 +1,5 @@
 {
-    "name": "hans-thomas/filterablestatsoverviewwidget",
+    "name": "hans-thomas/filament-filterable-overview-widget",
     "description": "The FilterableStatsOverviewWidget package lets you to filter your stats data.",
     "keywords": [
         "hans-thomas",
@@ -9,10 +9,10 @@
         "filament-widget",
         "filterable stats overview widget"
     ],
-    "homepage": "https://github.com/hans-thomas/FilterableStatsOverviewWidget",
+    "homepage": "https://github.com/hans-thomas/filament-filterable-overview-widget",
     "support": {
-        "issues": "https://github.com/hans-thomas/FilterableStatsOverviewWidget/issues",
-        "source": "https://github.com/hans-thomas/FilterableStatsOverviewWidget"
+        "issues": "https://github.com/hans-thomas/filament-filterable-overview-widget/issues",
+        "source": "https://github.com/hans-thomas/filament-filterable-overview-widget"
     },
     "license": "MIT",
     "authors": [
@@ -41,13 +41,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Hans\\FilterableStatsOverviewWidget\\": "src/",
-            "Hans\\FilterableStatsOverviewWidget\\Database\\Factories\\": "database/factories/"
+            "Hans\\FilamentFilterableOverviewWidget\\": "src/",
+            "Hans\\FilamentFilterableOverviewWidget\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Hans\\FilterableStatsOverviewWidget\\Tests\\": "tests/"
+            "Hans\\FilamentFilterableOverviewWidget\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -67,11 +67,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Hans\\FilterableStatsOverviewWidget\\FilterableStatsOverviewWidgetServiceProvider"
-            ],
-            "aliases": {
-                "FilterableStatsOverviewWidget": "Hans\\FilterableStatsOverviewWidget\\Facades\\FilterableStatsOverviewWidget"
-            }
+                "Hans\\FilamentFilterableOverviewWidget\\FilamentFilterableOverviewWidgetServiceProvider"
+            ]
         }
     },
     "minimum-stability": "dev",

@@ -1,14 +1,14 @@
 <?php
 
-namespace Hans\FilterableStatsOverviewWidget;
+namespace Hans\FilamentFilterableOverviewWidget;
 
-use Hans\FilterableStatsOverviewWidget\Commands\FilterableStatsOverviewWidgetCommand;
+use Hans\FilamentFilterableOverviewWidget\Commands\FilamentFilterableOverviewWidgetCommand;
 use Illuminate\Filesystem\Filesystem;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-class FilterableStatsOverviewWidgetServiceProvider extends PackageServiceProvider
+class FilamentFilterableOverviewWidgetServiceProvider extends PackageServiceProvider
 {
     public static string $name = 'filterableStatsOverviewWidget';
 
@@ -58,7 +58,7 @@ class FilterableStatsOverviewWidgetServiceProvider extends PackageServiceProvide
     protected function getCommands(): array
     {
         return [
-            FilterableStatsOverviewWidgetCommand::class,
+            FilamentFilterableOverviewWidgetCommand::class,
         ];
     }
 }

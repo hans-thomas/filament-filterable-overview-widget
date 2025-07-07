@@ -1,5 +1,5 @@
 <?php
 
-use Hans\FilterableStatsOverviewWidget\Tests\TestCase;
+use Hans\FilamentFilterableOverviewWidget\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);

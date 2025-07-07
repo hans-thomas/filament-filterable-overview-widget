@@ -1,6 +1,6 @@
 <?php
 
-namespace Hans\FilterableStatsOverviewWidget;
+namespace Hans\FilamentFilterableOverviewWidget\Widgets;
 
 use Closure;
 use Filament\Actions\Concerns\InteractsWithActions;
@@ -14,7 +14,7 @@ use Filament\Widgets\StatsOverviewWidget as BaseWidget;
 /**
  * @property Form $form
  */
-abstract class FilterableStatsOverviewWidget extends BaseWidget implements HasForms
+abstract class FilterableOverviewWidget extends BaseWidget implements HasForms
 {
     use InteractsWithActions;
     use InteractsWithFormActions;
