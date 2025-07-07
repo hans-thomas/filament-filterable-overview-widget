@@ -61,7 +61,7 @@ it(
 namespace App\Filament\Widgets;
 
 use Closure;
-use Hans\FilamentFilterableOverviewWidget\FilterableStatsOverviewWidget as BaseWidget;
+use Hans\FilamentFilterableOverviewWidget\Widgets\FilterableOverviewWidget as BaseWidget;
 
 class MyFilterableStatsOverviewWidget extends BaseWidget
 {

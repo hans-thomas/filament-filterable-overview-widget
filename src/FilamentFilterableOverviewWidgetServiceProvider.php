@@ -10,9 +10,9 @@ use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class FilamentFilterableOverviewWidgetServiceProvider extends PackageServiceProvider
 {
-    public static string $name = 'filterableStatsOverviewWidget';
+    public static string $name = 'FilamentFilterableOverviewWidget';
 
-    public static string $viewNamespace = 'filterableStatsOverviewWidget';
+    public static string $viewNamespace = 'filamentFilterableOverviewWidget';
 
     public function configurePackage(Package $package): void
     {
@@ -25,7 +25,7 @@ class FilamentFilterableOverviewWidgetServiceProvider extends PackageServiceProv
             ->hasCommands($this->getCommands())
             ->hasInstallCommand(function (InstallCommand $command) {
                 $command
-                    ->askToStarRepoOnGitHub('hans-thomas/filterableStatsOverviewWidget');
+                    ->askToStarRepoOnGitHub('hans-thomas/filament-filterable-overview-widget');
             });
 
         if (file_exists($package->basePath('/../resources/views'))) {
@@ -41,15 +41,15 @@ class FilamentFilterableOverviewWidgetServiceProvider extends PackageServiceProv
         if (app()->runningInConsole()) {
             foreach (app(Filesystem::class)->files(__DIR__ . '/../stubs/') as $file) {
                 $this->publishes([
-                    $file->getRealPath() => base_path("stubs/filterableStatsOverviewWidget/{$file->getFilename()}"),
-                ], 'filterableStatsOverviewWidget-stubs');
+                    $file->getRealPath() => base_path("stubs/filamentFilterableOverviewWidget/{$file->getFilename()}"),
+                ], 'filamentFilterableOverviewWidget-stubs');
             }
         }
     }
 
     protected function getAssetPackageName(): ?string
     {
-        return 'hans-thomas/filterableStatsOverviewWidget';
+        return 'hans-thomas/filamentFilterableOverviewWidget';
     }
 
     /**

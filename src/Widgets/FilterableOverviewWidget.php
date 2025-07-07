@@ -20,7 +20,7 @@ abstract class FilterableOverviewWidget extends BaseWidget implements HasForms
     use InteractsWithFormActions;
     use InteractsWithForms;
 
-    protected static string $view = 'filterableStatsOverviewWidget::filterable-overview';
+    protected static string $view = 'filamentFilterableOverviewWidget::filterable-overview';
 
     protected static ?string $pollingInterval = null;
 
