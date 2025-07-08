@@ -1,53 +1,50 @@
-# This is my package filterableStatsOverviewWidget
+# Filament Filterable Overview widget
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/hans-thomas/filterableStatsOverviewWidget.svg?style=flat-square)](https://packagist.org/packages/hans-thomas/filterablestatsoverviewwidget)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/hans-thomas/filterableStatsOverviewWidgetfilterablestatsoverviewwidget/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/hans-thomas/filterablestatsoverviewwidget/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/hans-thomas/filterableStatsOverviewWidgetfilterablestatsoverviewwidget/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/hans-thomas/filterablestatsoverviewwidget/actions?query=workflow%3A"Fix+PHP+code+styling"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/hans-thomas/filterableStatsOverviewWidgetfilterablestatsoverviewwidget.svg?style=flat-square)](https://packagist.org/packages/hans-thomas/filterablestatsoverviewwidget)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/hans-thomas/filament-filterable-overview-widget.svg?style=flat-square)](https://packagist.org/packages/hans-thomas/filterablestatsoverviewwidget)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/hans-thomas/filament-filterable-overview-widget/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/hans-thomas/filterablestatsoverviewwidget/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/hans-thomas/filament-filterable-overview-widget/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/hans-thomas/filterablestatsoverviewwidget/actions?query=workflow%3A"Fix+PHP+code+styling"+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/hans-thomas/filament-filterable-overview-widget.svg?style=flat-square)](https://packagist.org/packages/hans-thomas/filterablestatsoverviewwidget)
 
 
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+This widget allows you to filter your overview data and apply conditions on your stats.
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require hans-thomas/filterablestatsoverviewwidget
+composer require hans-thomas/filament-filterable-overview-widget
 ```
 
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag="filterablestatsoverviewwidget-migrations"
-php artisan migrate
-```
-
-You can publish the config file with:
-
-```bash
-php artisan vendor:publish --tag="filterablestatsoverviewwidget-config"
-```
-
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag="filterablestatsoverviewwidget-views"
-```
-
-This is the contents of the published config file:
-
-```php
-return [
-];
-```
+![](./assets/screenshot.png "screenshot of filament filterable overview widget")
 
 ## Usage
 
-```php
-$filterableStatsOverviewWidget = new FilterableStatsWithFormOverview\FilterableStatsOverviewWidget();
-echo $filterableStatsOverviewWidget->echoPhrase('Hello, FilterableStatsWithFormOverview!');
+Create your widget using the command:
+
+```shell
+> php artisan make:filament-filterable-overview-widget -h
+Description:
+  Create a Filterable stats overview widget class
+
+Usage:
+  make:filament-filterable-overview-widget [options] [--] <name>
+
+Arguments:
+  name                  Name of the widget
+
+Options:
+  -p, --panel[=PANEL]   Select a panel [default: "default"]
+  -h, --help            Display help for the given command. When no command is given display help for the list command
+      --silent          Do not output any message
+  -q, --quiet           Only errors are displayed. All other output is suppressed
+  -V, --version         Display this application version
+      --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction  Do not ask any interactive question
+      --env[=ENV]       The environment the command should run under
+  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
 ```
 
 ## Testing
