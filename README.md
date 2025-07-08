@@ -7,7 +7,7 @@
 
 
 
-This widget allows you to filter your overview data and apply conditions on your stats.
+This widget enables you to filter your overview data and apply conditions on your stats.
 
 ## Installation
 
