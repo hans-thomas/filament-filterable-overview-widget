@@ -1,6 +1,6 @@
 {
     "name": "hans-thomas/filament-filterable-overview-widget",
-    "description": "The FilterableStatsOverviewWidget package lets you to filter your stats data.",
+    "description": "This widget allows you to filter your overview data and apply conditions on your stats.",
     "keywords": [
         "hans-thomas",
         "laravel",
